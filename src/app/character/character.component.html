@@ -1,0 +1,9 @@
+<div *ngIf="character" class="card">
+    <div class="card-body">
+        <h3 class="card-title">{{ character.name }}</h3>
+        <div>Height: {{ character.height }}</div>
+        <div>Mass: {{ character.mass }}</div>
+        <div>Birthyear: {{ character.birth_year }}</div>
+    </div>
+</div>
+<button type="button" class="btn btn-primary" (click)="clickOnDetails()">Details</button>

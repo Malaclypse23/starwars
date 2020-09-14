@@ -1,0 +1,12 @@
+ul {
+    margin-bottom: 0;
+}
+
+li {
+    border: 0;
+    padding: 0.1rem 1.25rem;
+}
+
+.card-body *:nth-child(even) {
+    background: #f2f2f2
+}

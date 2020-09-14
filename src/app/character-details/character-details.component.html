@@ -1,0 +1,30 @@
+<div *ngIf="(characterDetails$ | async) as details" class="card">
+    <div class="card-body">
+        <h3 class="card-title">{{ details?.name }}</h3>
+        <div>Birthyear: {{ details?.birth_year }}</div>
+        <div>Eye color: {{ details?.eye_color }}</div>
+        <div>Gender: {{ details?.gender }}</div>
+        <div>Height: {{ details?.height }}</div>
+        <div>Mass: {{ details?.mass }}</div>
+        <div>Skin color: {{ details?.skin_color }}</div>
+        <div>Homeworld: {{ details?.homeworld }}</div>
+        <div>Films: </div>
+        <ul class="list-group list-group-flush"> 
+            <li *ngFor="let film of details?.films" class="list-group-item">{{ film }}</li>
+        </ul>
+        <div *ngIf="details.species?.length">Species: </div>
+        <ul class="list-group list-group-flush"> 
+            <li *ngFor="let spec of details?.species" class="list-group-item">{{ spec }}</li>
+        </ul>
+        <div *ngIf="details.starships?.length">Starships: </div>
+        <ul class="list-group list-group-flush">
+            <li *ngFor="let ship of details?.starships" class="list-group-item">{{ ship }}</li>
+        </ul>
+        <ul class="list-group list-group-flush">Vehicles: 
+            <li *ngFor="let vehicle of details?.vehicles" class="list-group-item">{{ vehicle }}</li>
+        </ul>
+        <div>URL: {{ details?.url }}</div>
+        <div>created: {{ details?.created }}</div>
+        <div>edited: {{ details?.edited }}</div>
+    </div>
+</div>
